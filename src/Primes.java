@@ -1,13 +1,15 @@
+import java.lang.reflect.Array;
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
 import static java.lang.Math.sqrt;
 
 public class Primes {
-    private static List<Integer> sieveOfEratosthenes(int upperBound){
+    private static List<Integer> sieveOfEratosthenes(long upperBound){
 
         List<Integer> result = new LinkedList<>();
-        boolean[] primes = new boolean[upperBound];
+        boolean[] primes = new boolean[(int) upperBound];
         for(int i= 2; i < primes.length;i++){
             primes[i] = true;
         }
